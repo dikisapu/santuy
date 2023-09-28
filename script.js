@@ -14,9 +14,27 @@
 // tutup.forEach((event) => {
 //   event.addEventListener("click", (e) => {
 //     e.target.parentElement.style.display = "none";
+//     e.preventDefault();
+//     e.stopPropagation();
 //   });
 // });
 
-const nama = document.querySelector(".telp");
-console.log(nama.nextElementSibling);
-console.log(nama.parentElement.nextElementSibling.nextElementSibling);
+// const nama = document.querySelector(".telp");
+// console.log(nama.nextElementSibling);
+// console.log(nama.parentElement.nextElementSibling.nextElementSibling);
+// // alert("testing");
+
+// const cards = document.querySelectorAll(".card");
+// cards.forEach((card) => {
+//   card.addEventListener("click", (e) => {
+//     alert("oke");
+//   });
+// });
+
+const container = document.querySelector(".container");
+container.addEventListener("click", (e) => {
+  if (e.target.className === "close") {
+    e.target.parentElement.style.display = "none";
+    e.preventDefault();
+  }
+});
